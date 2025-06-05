@@ -5,15 +5,15 @@ import os
 # Set base directory (G5-MP2-DAA)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# Path to views inside my_app/
-VIEWS_DIR = os.path.join(BASE_DIR, "my_app", "views")
+# Path to views inside src/
+VIEWS_DIR = os.path.join(BASE_DIR, "src", "views")
 
 # Page configuration dictionary
 PAGES = {
-    "about": {"label": "About"},
-    "insertion_sort": {"label": "Insertion Sort"},
-    "binary_search": {"label": "Binary Search"},
-    "rmm": {"label": "RMM"}
+    "home_page": {"label": "Home"},
+    "insertion_page": {"label": "Insertion Sort"},
+    "binary_page": {"label": "Binary Search"},
+    "rmm_page": {"label": "Russian Multiplication"}
 }
 
 def main():
@@ -21,7 +21,7 @@ def main():
 
     # Initialize default page
     if "page" not in st.session_state:
-        st.session_state.page = "about"
+        st.session_state.page = "home_page"
 
     # Show navbar
     create_navbar()
@@ -35,9 +35,10 @@ def main():
     spec.loader.exec_module(module)
 
     # Call the correct show_*_page() function
-    getattr(module, f"show_{page_name}_page")()
+    getattr(module, f"{page_name}")()
 
 def create_navbar():
+    """Nav bar for home, about, insertion, binary, and rmm"""
     cols = st.columns(len(PAGES))
     for col, (key, page) in zip(cols, PAGES.items()):
         with col:
