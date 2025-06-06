@@ -1,20 +1,20 @@
-def binary_search(arr, search_value):
+def binary_search(arr, target):
     """
     Performs binary search on a sorted array.
     """
     # Initialize a list to track the passes (comparisons)
     passes = []
-    left, right = 0, len(arr) - 1
+    low, high = 0, len(arr) - 1
 
-    while left <= right:
-        mid = (left + right) // 2
-        passes.append((left, mid, right, arr[mid]))
+    while low <= high:
+        mid = (low + high) // 2
+        passes.append((low, mid, high, arr[mid]))
 
-        if arr[mid] == search_value:
+        if arr[mid] == target:
             return passes, mid
-        elif arr[mid] < search_value:
-            left = mid + 1
+        elif arr[mid] < target:
+            low = mid + 1
         else:
-            right = mid - 1
+            high = mid - 1
 
     return passes, -1
