@@ -1,16 +1,17 @@
-def russian_peasant_multiplication(a, b):
+def russian_multiplication(a, b):
+    """Perform Russian multiplication and track steps.
     """
-    Perform Russian Peasant Multiplication.
-    """
-    #Initialize a list of dictionaries showing each halving and doubling
+    #List to store each step
     steps = []
-    result = 0
+    #Initialize the total
+    total = 0
 
     while a > 0:
-        steps.append({'a': a, 'b': b, 'included': a % 2 != 0})
-        if a % 2 != 0:
-            result += b
+        keep = a % 2 != 0
+        if keep:
+            total += b
+        steps.append((a, b, keep))
         a //= 2
         b *= 2
 
-    return steps, result
+    return total, steps
