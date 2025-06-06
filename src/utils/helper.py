@@ -2,7 +2,7 @@ import time
 import random
 from src.utils.algorithms.binary_search import binary_search
 from src.utils.algorithms.insertion_sort import insertion_sort
-from src.utils.algorithms.rmm import russian_peasant_multiplication
+from src.utils.algorithms.rmm import russian_multiplication
 
 # INSERTION SORT HELPER
 def measure_insertion_runtime(arr, ascending=True):
@@ -56,19 +56,19 @@ def generate_sorted_array(n, min_val, max_val, value_type="Numbers"):
     else:
         raise ValueError("Invalid value_type. Must be 'Numbers' or 'Letters'.")
     return sorted(arr)
-
-    
-# RRMM HELPER
+ 
+# RMM HELPER
 def gen_two_random_values(min_val=1, max_val=100):
     """Generate two non-negative random integers."""
     a = random.randint(min_val, max_val)
     b = random.randint(min_val, max_val)
     return a, b
 
-def format_rmm_steps(steps):
-    """Format RMM steps for display."""
+def format_rmm_steps(a, b):
+    """Run RMM and format steps for display."""
+    result, steps = russian_multiplication(a, b)
     formatted = []
-    for a, b, keep in steps:
-        line = f"{a:5} | {b:5} | {'.👌' if keep else '🥺'}"
+    for x, y, keep in steps:
+        line = f"{x:5} | {y:5} | {'😂👌' if keep else '🥺'}"
         formatted.append(line)
-    return formatted
+    return result, steps, formatted
