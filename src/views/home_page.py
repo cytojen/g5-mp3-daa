@@ -26,7 +26,7 @@ def home_page():
         "shikina.jpg",
         "matan.jpg",
         "jyesh.png",
-        "member7.png",
+        "frances.png",
         "member8.jpg",
         "member9.jpeg"
     ]
@@ -51,7 +51,7 @@ def home_page():
         "Shikina Cabral",
         "Matan John Exconde",
         "Jyeshua Rey Velasco",
-        "Member 7",
+        "Frances Lorraine Montemayor",
         "Member 8",
         "Member 9"
     ]
