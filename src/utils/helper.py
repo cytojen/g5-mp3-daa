@@ -28,7 +28,6 @@ def generate_random_array(n, min_val, max_val, value_type="Numbers"):
     else:
         raise ValueError("Invalid value_type. Must be 'Numbers' or 'Letters'.")
 
-
 # BINARY SEARCH HELPER
 def is_sorted(arr):
     """Check if the array is sorted in ascending order."""
@@ -66,9 +65,13 @@ def gen_two_random_values(min_val=1, max_val=100):
 
 def format_rmm_steps(a, b):
     """Run RMM and format steps for display."""
+    if a < 0 or b < 0:
+        raise ValueError("Negative values are not supported by Russian Multiplication Method.")
+    
     result, steps = russian_multiplication(a, b)
     formatted = []
     for x, y, keep in steps:
-        line = f"{x:5} | {y:5} | {'😂👌' if keep else '🥺'}"
+        line = f"{x:5} | {y:5} | {'✓' if keep else '✗'}"
         formatted.append(line)
     return result, steps, formatted
+
