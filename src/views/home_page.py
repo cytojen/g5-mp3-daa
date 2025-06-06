@@ -65,8 +65,6 @@ def home_page():
 
     # Display members in rows of 5 and then remaining
     display_row(0, 5)
-
-    # hindi ko mafix, ginawa ko na lang 10 displays para same sizes, pa-try nga itroubleshoot sa inspect element (change to 9)
     display_row(5, 10)
 
     st.divider()
