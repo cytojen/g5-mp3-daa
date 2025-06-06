@@ -27,7 +27,7 @@ def home_page():
         "matan.jpg",
         "jyesh.png",
         "frances.png",
-        "member8.jpg",
+        "jorelle.jpg",
         "member9.jpeg"
     ]
 
@@ -52,8 +52,8 @@ def home_page():
         "Matan John Exconde",
         "Jyeshua Rey Velasco",
         "Frances Lorraine Montemayor",
-        "Member 8",
-        "Member 9"
+        "Jorelle Cybee Lenar",
+        "Eric Samillano"
     ]
 
     def display_row(start, end):
