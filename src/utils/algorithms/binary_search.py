@@ -1,24 +1,20 @@
-def binary_search(arr, target):
+def binary_search(arr, search_value):
     """
-    Perform binary search on a sorted array.
-    Records the low, mid, and high indices on each pass.
-    Returns:
-        - passes: list of dictionaries with low, mid, high values
-        - index: index of target in arr or -1 if not found
+    Performs binary search on a sorted array.
     """
-    low = 0
-    high = len(arr) - 1
+    # Initialize a list to track the passes (comparisons)
     passes = []
+    left, right = 0, len(arr) - 1
 
-    while low <= high:
-        mid = (low + high) // 2
-        passes.append({'low': low, 'mid': mid, 'high': high, 'mid_value': arr[mid]})
+    while left <= right:
+        mid = (left + right) // 2
+        passes.append((left, mid, right, arr[mid]))
 
-        if arr[mid] == target:
+        if arr[mid] == search_value:
             return passes, mid
-        elif arr[mid] < target:
-            low = mid + 1
+        elif arr[mid] < search_value:
+            left = mid + 1
         else:
-            high = mid - 1
+            right = mid - 1
 
     return passes, -1
