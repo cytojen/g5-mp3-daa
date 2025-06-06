@@ -60,12 +60,12 @@ def insertion_page():
         col1, col2 = st.columns(2)
 
         with col1:
-            st.subheader("🟦 Original Array")
+            st.subheader("Original Array")
             st.code(f"{arr}", language="python")
-            st.success(f"✅ Sorted array: {sorted_arr}")
+            st.success(f"Sorted array: {sorted_arr}")
 
         with col2:
-            st.subheader("🔄 Sorting Steps")
+            st.subheader("Sorting Steps")
             for idx, state in enumerate(passes, 1):
                 st.code(f"Pass {idx}: {state}")
 

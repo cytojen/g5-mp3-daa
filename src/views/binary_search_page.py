@@ -78,7 +78,7 @@ def binary_search_page():
                     st.subheader("Original Array")
                     st.code(arr)
                     if index != -1:
-                        st.success(f"😱Found {target} at index {index}")
+                        st.success(f"Found {target} at index {index}")
                     else:
                         st.error(f"{target} not found")
                 with col2:
