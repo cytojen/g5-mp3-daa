@@ -12,7 +12,7 @@ VIEWS_DIR = os.path.join(BASE_DIR, "src", "views")
 PAGES = {
     "home_page": {"label": "Home"},
     "insertion_page": {"label": "Insertion Sort"},
-    "binary_page": {"label": "Binary Search"},
+    "binary_search_page": {"label": "Binary Search"},
     "rmm_page": {"label": "Russian Multiplication"}
 }
 
