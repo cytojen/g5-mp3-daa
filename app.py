@@ -13,7 +13,8 @@ PAGES = {
     "home_page": {"label": "Home"},
     "insertion_page": {"label": "Insertion Sort"},
     "binary_search_page": {"label": "Binary Search"},
-    "rmm_page": {"label": "Russian Multiplication"}
+    "rmm_page": {"label": "Russian Multiplication"},
+    "video_page": {"label": "Video Demo"}
 }
 
 def main():
