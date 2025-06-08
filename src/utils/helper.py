@@ -44,18 +44,21 @@ def measure_binary_search_runtime(arr, target):
     runtime = end - start
     return runtime, passes, index, sorted_flag
 
-def generate_sorted_array(n, min_val, max_val, value_type="Numbers"):
+def generate_sorted_array(n, min_val, max_val, value_type="Numbers", allow_floats=False):
     """
     Generate a sorted array of numbers or letters.
     """
     if value_type == "Numbers":
-        arr = [random.randint(min_val, max_val) for _ in range(n)]
+        if allow_floats:
+            arr = [random.uniform(min_val, max_val) for _ in range(n)]
+        else:
+            arr = [random.randint(min_val, max_val) for _ in range(n)]
     elif value_type == "Letters":
         arr = [chr(random.randint(min_val, max_val)) for _ in range(n)]
     else:
         raise ValueError("Invalid value_type. Must be 'Numbers' or 'Letters'.")
     return sorted(arr)
- 
+
 # RMM HELPER
 def gen_two_random_values(min_val=1, max_val=100):
     """Generate two non-negative random integers."""
@@ -65,8 +68,10 @@ def gen_two_random_values(min_val=1, max_val=100):
 
 def format_rmm_steps(a, b):
     """Run RMM and format steps for display."""
-    if not isinstance(a, int) or not isinstance(b, int):
-        raise ValueError("Decimal values are not supported by Russian Multiplication Method.")
+
+    if not (float(a).is_integer() and float(b).is_integer()):
+        raise ValueError("Decimal values are not supported by Russian Multiplication Method. Please enter whole numbers.")
+
     if a < 0 or b < 0:
         raise ValueError("Negative values are not supported by Russian Multiplication Method.")
     
