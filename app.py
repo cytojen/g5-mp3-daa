@@ -11,10 +11,11 @@ VIEWS_DIR = os.path.join(BASE_DIR, "src", "views")
 # Page configuration dictionary
 PAGES = {
     "home_page": {"label": "Home"},
+    "about_page": {"label": "About"},
     "insertion_page": {"label": "Insertion Sort"},
     "binary_search_page": {"label": "Binary Search"},
     "rmm_page": {"label": "Russian Multiplication"},
-    "video_page": {"label": "Video Demo"}
+    "video_page": {"label": "Video Demo"}   
 }
 
 def main():
