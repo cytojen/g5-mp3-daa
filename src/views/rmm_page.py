@@ -12,8 +12,8 @@ def rmm_page():
 
     # Handle input depending on user selection
     if input_mode == "Manual Input":
-        a = st.number_input("Enter first number (A)", step=1, format="%d")
-        b = st.number_input("Enter second number (B)", step=1, format="%d")
+        a = st.number_input("Enter first number (A)", value=0.0, format="%g")
+        b = st.number_input("Enter second number (B)", value=0.0, format="%g")
     else:
         if st.button("Generate Values"):
             a, b = gen_two_random_values()
