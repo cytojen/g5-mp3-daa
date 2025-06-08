@@ -10,7 +10,7 @@
 </p>
 
 <h1 align="center">
-  🔗 <strong>Live App:</strong> <a href="https://dncalgo.streamlit.app/">dncalgo.streamlit.app</a>
+  🔗 <strong>Live App:</strong> <a href="https://dncalgo.streamlit.app/" target="_blank" rel="noopener noreferrer" >dncalgo.streamlit.app</a>
 </h1>
 
 ---
@@ -23,7 +23,7 @@ This project is an **interactive visualization tool** for learning and understan
 
 ## Features
 
-- ✅ Select from multiple Decrease and Coqnuer algorithms  
+- ✅ Select from multiple Decrease and Conquer algorithms  
 - ✅ Input custom data arrays  
 - ✅ View algorithm step-by-step visualization  
 - ✅ Check the runtime of the algorithm
@@ -54,10 +54,14 @@ This project is an **interactive visualization tool** for learning and understan
   ```
 
 3. Install dependencies
-  ```pip install -r requirements.txt ```
+  ```
+    pip install -r requirements.txt
+  ```
 
 5. Run the Streamlit app locally
-  ```streamlit run app.py```
+  ```
+    streamlit run app.py
+  ```
 
 ---
 
@@ -100,5 +104,5 @@ cytojen-g5-mp3-daa/
 
 ---
 
-# Developed by Group 6
+### Developed by Group 6
 
