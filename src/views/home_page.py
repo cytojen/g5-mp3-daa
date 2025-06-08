@@ -25,10 +25,10 @@ def home_page():
         "luis.jpg",
         "shikina.jpg",
         "matan.jpg",
-        "jyesh.png",
-        "frances.png",
+        "jyesh.jpg",
+        "frances.jpg",
         "jorelle.jpg",
-        "member9.jpeg"
+        "eric.jpg"
     ]
 
     # Fallback image (if an image is missing)
