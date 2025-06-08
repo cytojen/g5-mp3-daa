@@ -17,7 +17,7 @@
 
 ## Overview
 
-This project is an **interactive visualization tool** for learning and understanding *Divide and Conquer* algorithms made by Group 6. This is built using **Streamlit** and it allows users to explore the inner workings of classic D&C algorithms step-by-step in an intuitive web interface.
+This project is a **visualization tool** for learning and understanding *Divide and Conquer* algorithms step-by-step made by Group 6. This is built using **Streamlit** and it allows users to explore the inner workings of classic D&C algorithms step-by-step in an intuitive web interface.
 
 ---
 
