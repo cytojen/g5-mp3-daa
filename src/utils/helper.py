@@ -47,8 +47,11 @@ def measure_binary_search_runtime(arr, target):
 def generate_sorted_array(n, min_val, max_val, value_type="Numbers"):
     """
     Generate a sorted array of numbers or letters.
+    Ensures only integers are allowed for numeric arrays.
     """
     if value_type == "Numbers":
+        if not all(isinstance(v, int) for v in [n, min_val, max_val]):
+            raise ValueError("Only integers are allowed for numeric array generation.")
         arr = [random.randint(min_val, max_val) for _ in range(n)]
     elif value_type == "Letters":
         arr = [chr(random.randint(min_val, max_val)) for _ in range(n)]
