@@ -8,7 +8,7 @@ def binary_search_page():
     
     # Let user choose the data type first\
     value_type = st.radio("Data type", ("Numbers", "Letters"))
-
+    
     # Input method selection
     input_mode = st.radio("Choose input method:", ("Random Generator", "Input your own values"))
 
@@ -39,8 +39,8 @@ def binary_search_page():
         if arr_input:
             raw = [x.strip() for x in arr_input.split(",") if x.strip()]
             try:
-                # Parse input to int or keep as string depending on data type
-                arr = [int(x) for x in raw] if value_type == "Numbers" else raw
+                # Parse input to float instead of int if Numbers type
+                arr = [float(x) for x in raw] if value_type == "Numbers" else raw
             except:
                 st.warning("Invalid array input.")
                 return
@@ -48,7 +48,7 @@ def binary_search_page():
             if any(arr[i] > arr[i+1] for i in range(len(arr)-1)):
                 st.warning("Array must be sorted.")
                 return
-
+            
     # Display the array if available
     if arr:
         st.subheader("Array (Sorted)")
@@ -64,14 +64,14 @@ def binary_search_page():
                 return
             try:
                 # Convert target input according to data type
-                target = int(target_input) if value_type == "Numbers" else target_input
+                target = float(target_input) if value_type == "Numbers" else target_input
                 if value_type == "Letters" and len(target) != 1:
                     raise ValueError
 
                 # Call the measure time function from the helper file 
                 # which also calls the binary search algorithm
                 runtime, passes, index, _ = measure_binary_search_runtime(arr, target)
-
+                
                 # Show original array and search results side-by-side
                 col1, col2 = st.columns(2)
                 with col1:
